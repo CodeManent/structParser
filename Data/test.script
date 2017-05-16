@@ -1,0 +1,67 @@
+struct point{
+	i32 x;
+	i32 y;
+	i32 z;
+}
+
+struct triangle{
+	point vertex1;
+	point vertex2;
+	point vertex3;
+}
+
+struct triangle2{
+	point vertex[3];
+	u32 gtp;
+}
+
+struct model{
+	char name[5];
+	i32 triangles;
+	point tri[triangles];
+}
+
+struct testStruct{
+	i32 flag;
+
+	i32 a;
+	i32 b;
+
+	var testvar = a + -b;
+
+	if( true == 3 > 5 -1 )
+	{
+		i32 c;
+	}
+}
+
+struct test2{
+	testStruct test;
+	i32 a;
+}
+
+struct BmpFile{
+	struct BitmapFileHeader{
+		char magic_0;
+		char magic_1;
+		u32 filesize;
+		u16 reserved0;
+		u16 reserved1;
+		u32 offset;
+	} fileHeader;
+
+	struct BitmapInfoHeader{
+		u32 headerSize;
+		i32 width;
+		i32 height;
+		u16 nplanes;
+		u32 bitspp;
+		u32 compress_type;
+		u32 bmp_bytez;
+		i32 hres;
+		i32 vres;
+		u32 ncolors;
+		u32 nimpcolors;
+	} infoHeader;
+}
+
